@@ -32,7 +32,7 @@ const Header = () => (
     </Div1>
     <Div2>
       <li>
-        <Link href="#About">
+        <Link href="#about">
           <NavLink>About</NavLink>
         </Link>
       </li>
@@ -47,6 +47,9 @@ const Header = () => (
         </Link>
       </li>
     </Div2>
+    <Link href="#about">
+      <NavLink style={{ border: 'solid' }}>Download Resume</NavLink>
+    </Link>
     <Div3>
       <SocialIcons target="_blank" href="https://github.com/willsanchez86">
         <AiFillGithub size="3rem"></AiFillGithub>

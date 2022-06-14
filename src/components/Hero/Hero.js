@@ -46,8 +46,15 @@ function Hero(props) {
           Development seeming boundless, I'm grateful for the opportunity to
           build a small piece of our future.
         </SectionText>
-        {/* TODO: Add Link to Email*/}
         <Button onClick={() => setShowModal(true)}>Contact Me</Button>
+        <a
+          id="downloadResume"
+          href="src\assets\WilliamSanchezResume.pdf"
+          class="button home__button"
+          download=""
+        >
+          Download Resume
+        </a>
         <Modal onClose={() => setShowModal(false)} show={showModal}></Modal>
       </LeftSection>
     </Section>

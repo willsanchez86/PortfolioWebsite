@@ -55,16 +55,16 @@ const Modal = ({ show, onClose, children, title }) => {
               <Input type="text" name="subject" />
               <Label>Subject</Label>
             </FormContainer>
-            <FormContainer>
+            <TextAreaContainer>
               <MessageInput name="message" cols="30" rows="4"></MessageInput>
               <Label>Your Message</Label>
-            </FormContainer>
+            </TextAreaContainer>
             <input
               type="hidden"
               name="_autoresponse"
               value="Your message was received! I will respond as soon as I can!"
             ></input>
-            <input type="submit" value="Submit" />
+            <SubmitButton />
           </Form>
         </StyledModalBody>
       </StyledModal>
@@ -99,8 +99,8 @@ const ModalTitle = styled.h1`
 `;
 
 const StyledModal = styled.div`
-  background: #e0e4eb;
-  color: #0f1624;
+  background: #0f1624;
+  color: white;
   width: 500px;
   height: 600px;
   border-radius: 15px;
@@ -127,33 +127,85 @@ const Form = styled.form`
 `;
 
 const FormContainer = styled.div`
-  height: 20%;
+  margin-left: 30px;
+  height: 15%;
   position: relative;
-`;
-
-const Input = styled.input`
-  height: 80%;
-  width: 300px;
-  background: transparent;
-  border: hidden;
-  border-bottom solid;
-  position: absolute;
-  bottom: 0;
-  left: 3rem;
-`;
-
-const MessageInput = styled.textarea`
-  background: transparent;
-  border: hidden;
-  border-bottom: solid;
-  margin-left: 3rem;
-  width: 300px;
 `;
 
 const Label = styled.label`
   position: absolute;
+  bottom: 10px;
+  left: 3.2rem;
+`;
+
+const Input = styled.input`
+  height: 60%;
+  width: 300px;
+  background: transparent;
+  color: white;
+  border: hidden;
+  border-bottom solid;
+  border-bottom-color: white;
+  position: absolute;
   bottom: 0;
-  left: calc(3rem + 305px);
+  left: 3rem;
+
+  &:focus {
+    outline: 0;
+    border-bottom-color: #b133ff;
+  }
+
+  &:focus + ${Label} {
+    color: #b133ff;
+    opacity: 1;
+    transition: 0.2s ease all;
+    top: 10px;
+    font-size: 1.5rem;
+  }
+`;
+
+const TextAreaContainer = styled.div`
+  margin-left: 30px;
+  height: 28%;
+  position: relative;
+`;
+
+const MessageInput = styled.textarea`
+  background: transparent;
+  color: white;
+  border: hidden;
+  border-bottom: solid;
+  border-bottom-color: white;
+  position: absolute;
+  bottom: 0;
+  margin-left: 3rem;
+  width: 300px;
+
+  &:focus + ${Label} {
+    color: #a543d6;
+    opacity: 1;
+    transition: 0.2s ease all;
+    top: 10px;
+    font-size: 1.5rem;
+  }
+`;
+
+const SubmitButton = styled.input.attrs({ type: 'submit', value: 'Submit' })`
+  width: 50%;
+  margin-left: calc(3rem + 60px);
+  margin-top: 30px;
+  background: #75239e;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 16px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(270deg, #945dd6 0%, #a55b9e 100%);
+  }
 `;
 
 export default Modal;
