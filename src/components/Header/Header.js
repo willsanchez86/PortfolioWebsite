@@ -48,7 +48,7 @@ const Header = () => (
       </li>
     </Div2>
     <Link href="#about">
-      <NavLink style={{ border: 'solid' }}>Download Resume</NavLink>
+      <NavLink style={{ fontWeight: 'bold' }}>Download Resume</NavLink>
     </Link>
     <Div3>
       <SocialIcons target="_blank" href="https://github.com/willsanchez86">

@@ -5,8 +5,28 @@ import Button from '../../styles/GlobalComponents/Button';
 import { FaUserAlt, FaTag } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
+const initialValues = {
+  name: '',
+  email: '',
+  subject: '',
+  message: null,
+};
+
 const Modal = ({ show, onClose, children, title }) => {
   const [isBrowser, setIsBrowser] = useState(false);
+  const [values, setValues] = useState(initialValues);
+
+  // Form Input Changes
+  const handleInputChange = (e) => {
+    //const name = e.target.name
+    //const value = e.target.value
+    const { name, value } = e.target;
+
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
 
   useEffect(() => {
     setIsBrowser(true);
@@ -36,7 +56,12 @@ const Modal = ({ show, onClose, children, title }) => {
                 size="2.5rem"
                 style={{ position: 'absolute', bottom: 0, left: 0 }}
               />
-              <Input type="text" name="name" />
+              <Input
+                type="text"
+                name="name"
+                value={values.name}
+                onChange={handleInputChange}
+              />
               <Label>Your Name</Label>
             </FormContainer>
             <FormContainer>
@@ -44,7 +69,12 @@ const Modal = ({ show, onClose, children, title }) => {
                 size="2.5rem"
                 style={{ position: 'absolute', bottom: 0, left: 0 }}
               />
-              <Input type="email" name="email" />
+              <Input
+                type="email"
+                name="email"
+                value={values.email}
+                onChange={handleInputChange}
+              />
               <Label>Your Email</Label>
             </FormContainer>
             <FormContainer>
@@ -52,11 +82,22 @@ const Modal = ({ show, onClose, children, title }) => {
                 size="2.5rem"
                 style={{ position: 'absolute', bottom: 0, left: 0 }}
               />
-              <Input type="text" name="subject" />
+              <Input
+                type="text"
+                name="subject"
+                value={values.subject}
+                onChange={handleInputChange}
+              />
               <Label>Subject</Label>
             </FormContainer>
             <TextAreaContainer>
-              <MessageInput name="message" cols="30" rows="4"></MessageInput>
+              <MessageInput
+                name="message"
+                onChange={handleInputChange}
+                cols="30"
+                rows="4"
+                value={values.message}
+              ></MessageInput>
               <Label>Your Message</Label>
             </TextAreaContainer>
             <input
@@ -132,12 +173,6 @@ const FormContainer = styled.div`
   position: relative;
 `;
 
-const Label = styled.label`
-  position: absolute;
-  bottom: 10px;
-  left: 3.2rem;
-`;
-
 const Input = styled.input`
   height: 60%;
   width: 300px;
@@ -153,14 +188,6 @@ const Input = styled.input`
   &:focus {
     outline: 0;
     border-bottom-color: #b133ff;
-  }
-
-  &:focus + ${Label} {
-    color: #b133ff;
-    opacity: 1;
-    transition: 0.2s ease all;
-    top: 10px;
-    font-size: 1.5rem;
   }
 `;
 
@@ -181,8 +208,32 @@ const MessageInput = styled.textarea`
   margin-left: 3rem;
   width: 300px;
 
-  &:focus + ${Label} {
-    color: #a543d6;
+  // &:focus + ${Label} {
+  //   color: #a543d6;
+  //   opacity: 1;
+  //   transition: 0.2s ease all;
+  //   top: 10px;
+  //   font-size: 1.5rem;
+  // }
+`;
+
+const Label = styled.label`
+  position: absolute;
+  bottom: 10px;
+  left: 3.2rem;
+
+  ${Input}:focus ~ &,
+  ${Input}:not(focus):not([value=""]) ~ & {
+    color: #b133ff;
+    opacity: 1;
+    transition: 0.2s ease all;
+    top: 10px;
+    font-size: 1.5rem;
+  }
+
+  ${MessageInput}:focus ~ &,
+  ${MessageInput}:not(focus):not(:empty) ~ & {
+    color: #b133ff;
     opacity: 1;
     transition: 0.2s ease all;
     top: 10px;
