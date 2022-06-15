@@ -3,7 +3,7 @@ export const projects = [
     title: 'JTrivia Web App',
     description:
       "Based on the popular game show Jeopardy, this application's gameplay was implemented using raw JavaScript (no libraries) for DOM Manipulation through event handlers. This database contains nearly 50,000 questions to keep users on their toes and constantly entertained. Sign up for Free and play today!",
-    image: '/images/jtrivia.png',
+    image: '/images/jtrivia.PNG',
     tags: [
       'JavaScript',
       'Python',
@@ -25,7 +25,7 @@ export const projects = [
     title: 'NFT Minting Dapp',
     description:
       "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
-    image: '/images/oca-minting-dapp.png',
+    image: '/images/oca-minting-dapp.PNG',
     tags: [
       'React',
       'NodeJS',
@@ -45,7 +45,7 @@ export const projects = [
     title: 'Blog Website',
     description:
       'A Personal Blog Website, and my first full stack web application ever built From building out my first database, implementing/validating forms, user registration and login authentication, working through this project instilled a big picture understanding of the development process.',
-    image: '/images/blog.jpg',
+    image: '/images/blog.JPG',
     tags: [
       'Python',
       'HTML',
@@ -64,7 +64,7 @@ export const projects = [
     title: 'Github Finder',
     description:
       'Front End React Application which fetches data from the github API to search for user profiles and repositories. User data is rendered on appealing user profile pages that were styled using TailwindCss and DaisyUI.',
-    image: '/images/github-finder.jpg',
+    image: '/images/github-finder.JPG',
     tags: ['React', 'NodeJS', 'TailwindCSS', 'DaisyUI', 'API', 'Vercel'],
     source: 'https://github.com/willsanchez86/githubfinder-react',
     visit: 'https://githubfinder-react-mauve.vercel.app/',
