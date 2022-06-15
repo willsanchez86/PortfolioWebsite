@@ -12,9 +12,9 @@ export default function App({ Component, pageProps }) {
           />
           <meta
             property="og:description"
-            content="William Sanchez Full Stack Developer Portfolio. Review Projects, Languages, Technologies. Contact me directly. "
+            content="William Sanchez Full Stack Developer Portfolio. Review Projects, Languages, Technologies. Contact me directly."
           />
-          <meta property="og:image" content="/images/Portfolio Image.PNG" />
+          <meta property="og:image" content="/images/PortfolioImage.PNG" />
         </Head>
         <Component {...pageProps} />
       </Theme>
