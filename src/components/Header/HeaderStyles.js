@@ -66,6 +66,25 @@ export const NavLink = styled.a`
   }
 `;
 
+// ResumeLink
+export const ResumeLink = styled.a`
+  font-size: 2.3rem;
+  line-height: 32px;
+  font-weight: bold;
+  color: #945dd6;
+  opacity: 1;
+  text-align: center;
+  transition: 0.4s ease;
+  &:hover {
+    color: #00dbd8;
+    opacity: 1;
+    cursor: pointer;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0.5rem;
+  }
+`;
+
 /// DropDown Contact
 export const ContactDropDown = styled.button`
   border: none;

@@ -27,14 +27,6 @@ function Hero(props) {
           build a small piece of our future.
         </SectionText>
         <Button onClick={() => setShowModal(true)}>Contact Me</Button>
-        <a
-          id="downloadResume"
-          href="src\assets\WilliamSanchezResume.pdf"
-          className="button home__button"
-          download=""
-        >
-          Download Resume
-        </a>
         <Modal onClose={() => setShowModal(false)} show={showModal}></Modal>
       </LeftSection>
     </Section>

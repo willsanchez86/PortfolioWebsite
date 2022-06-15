@@ -169,7 +169,7 @@ const Form = styled.form`
 
 const FormContainer = styled.div`
   margin-left: 30px;
-  height: 15%;
+  height: 17%;
   position: relative;
 `;
 

@@ -9,6 +9,7 @@ import {
   Div2,
   Div3,
   NavLink,
+  ResumeLink,
   SocialIcons,
   Span,
 } from './HeaderStyles';
@@ -47,9 +48,16 @@ const Header = () => (
         </Link>
       </li>
     </Div2>
-    <Link href="#about">
-      <NavLink style={{ fontWeight: 'bold' }}>Download Resume</NavLink>
-    </Link>
+    <ResumeLink
+      id="downloadResume"
+      href="/images/WilliamSanchezResume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="button home__button"
+      download=""
+    >
+      Download Resume
+    </ResumeLink>
     <Div3>
       <SocialIcons target="_blank" href="https://github.com/willsanchez86">
         <AiFillGithub size="3rem"></AiFillGithub>
