@@ -24,7 +24,7 @@ export const projects = [
   {
     title: 'NFT Minting Dapp',
     description:
-      "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+      'Decentralized Full Stack NFT Minting Application built on Ethereum Network for Organized Crime Apes NFT Project (Deployed Demo Version on Rinkeby Testnet with dummy artwork for client privacy). Running a node independently is a costly endeavor, so the application is run using an Alchemy supernode. Blocknative libraries were used for real-time blockchain transaction management. ',
     image: '/images/oca-minting-dapp.PNG',
     tags: [
       'React',
