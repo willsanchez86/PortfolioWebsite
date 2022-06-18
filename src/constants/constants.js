@@ -24,7 +24,7 @@ export const projects = [
   {
     title: 'NFT Minting Dapp',
     description:
-      'Decentralized Full Stack NFT Minting Application built on Ethereum Network for Organized Crime Apes NFT Project (Deployed Demo Version on Rinkeby Testnet with dummy artwork for client privacy). Running a node independently is costly, so the application is run on an Alchemy supernode. Blocknative libraries were used for real-time blockchain transaction management. ',
+      'Decentralized Full Stack NFT Minting Application built on Ethereum Network for Organized Crime Apes NFT Project (Deployed Demo Version on Rinkeby Testnet with dummy artwork for client privacy). Running a self-hosted node is expensive, unreliable, and extremely time-consuming, so the application is run on an Alchemy supernode. Blocknative libraries were used for real-time blockchain transaction management. ',
     image: '/images/oca-minting-dapp.PNG',
     tags: [
       'React',
