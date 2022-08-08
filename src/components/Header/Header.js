@@ -50,7 +50,7 @@ const Header = () => (
     </Div2>
     <ResumeLink
       id="downloadResume"
-      href="/images/WilliamSanchezResume.pdf"
+      href="/images/WilliamSanchezResume2022.pdf"
       target="_blank"
       rel="noopener noreferrer"
       className="button home__button"
